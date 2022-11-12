@@ -1,0 +1,24 @@
+/*
+    Combine all material theme customisations
+    Reference: https://blog.thoughtram.io/angular/2017/05/23/custom-themes-with-angular-material.html
+*/
+@import "~@angular/material/theming";
+@import "colour-palettes";
+
+@include mat-core();
+
+// Export theme colours
+$primary-theme: mat-palette($primary-palette);
+$secondary-theme: mat-palette($secondary-palette);
+$warn-theme: mat-palette($warn-palette);
+
+$argo-theme: mat-light-theme($primary-theme, $secondary-theme, $warn-theme);
+
+// Base theme
+@include angular-material-theme($argo-theme);
+
+// Export theme colours
+$primary: mat-color($primary-theme, 200);
+$accent: mat-color($secondary-theme, 600);
+$warn: mat-color($warn-theme);
+

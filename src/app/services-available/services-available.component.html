@@ -1,0 +1,34 @@
+<div class="row pt-5 pb-5">
+  <div class="col-xl-6">
+    <ngb-carousel [activeId]="activeSlideId" #currSlide (click)="onSlideClicked(currSlide)">    
+      <ng-template ngbSlide *ngFor="let availableService of availableServices" [id]="availableService.title" (click)="updateSelected($event)">
+        <div class="picsum-img-wrapper">
+          <img [src]="availableService.imageUrl" class="d-block w-100"
+            alt="Random first slide" />
+        </div>
+        <div class="carousel-caption">
+          <h1>{{availableService.title}}</h1>        
+        </div>
+      </ng-template>   
+    </ngb-carousel>
+  </div>
+  <div class="col-xl-6 pt-sm-3">
+    <div class="d-flex flex-row align-items-center" style="height: 100%">
+      <div class="d-flex flex-column">
+      
+        <div>
+          <p class="h1">Services available</p>
+        </div>
+        <div>
+          <p class="h2">{{ selectedService.title }}</p>
+        </div>
+        <div>
+          <p>
+            {{ selectedService.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    
+</div>

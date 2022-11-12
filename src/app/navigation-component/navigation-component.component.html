@@ -1,0 +1,46 @@
+<div class="d-flex d-inline-flex justify-content-center align-self-center" *ngIf="!(isMobile$ |async)">
+  <button mat-button>Home</button>
+  <button mat-button [matMenuTriggerFor]="menu">Services</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu">About Us</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu">Mosque</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+</div>
+<div class="d-flex justify-content-end">
+  <button class="menu-button" mat-mini-fab color="primary" (click)="toggleMenu()" *ngIf="(isMobile$ |async)">
+    <mat-icon>menu</mat-icon>
+  </button>
+</div>
+<!-- <mat-drawer-container class="example-container" autosize *ngIf="(isMobile$ |async)">
+  <mat-drawer class="example-sidenav" mode="side" [opened]="openSideNav$ | async">
+    <div class="d-flex flex-column">
+      <button mat-button>Home</button>
+      <button mat-button [matMenuTriggerFor]="menu">Services</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="menu">About Us</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="menu">Mosque</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+ 
+  </mat-drawer>
+</mat-drawer-container> -->

@@ -1,0 +1,17 @@
+<carousel [height]="150" [cellWidth]="300">
+  <div class="carousel-cell" *ngFor="let number of [0,1,2,3,4,5]">
+    <div class="event-card">
+      <div class="event-card-heading">
+        <div class="event-card-heading-content-container">
+          Date: 10-11-22
+          Time: {{number}}:00
+        </div>
+      </div>
+      <div class="event-card-content">
+        <div class="event-card-content-container">
+          Majlis-e-Aza A diam sollicitudin tempor id eu. A scelerisque purus semper eget duis at tellus.
+        </div>
+      </div>
+    </div>
+  </div>
+</carousel>
